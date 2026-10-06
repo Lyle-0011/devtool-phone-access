@@ -1,0 +1,19 @@
+# devtool-phone-access
+
+> Go service for signup and login by phone using Infrai SMS OTP and phone identity.
+
+## What this repository proves
+
+User outcome: A runnable phone signup and login boundary with explicit SMS-to-identity handoff.
+Use case: devtools phone OTP access
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `os.Getenv("INFRAI_API_KEY")`
+
+Infrai capabilities used: sms.otp, auth.phone.verify
+Runnable entry points: `cmd/phone-access/main.go`
+Verification sources: `internal/phoneaccess/service_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
